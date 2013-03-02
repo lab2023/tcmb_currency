@@ -73,8 +73,7 @@ class Money
         return data['amount']
       end
       
-      def build_uri(from, to, date)
-      	
+      def build_uri(from, to, date)	
         uri = URI::HTTP.build(
           :host => SERVICE_HOST,
           :path => SERVICE_PATH,
@@ -92,6 +91,7 @@ class Money
 
         MultiJson.decode(data)
       end
+      
       def rate_key_for(from, to, date)
         "#{Currency.wrap(from).iso_code}_TO_#{Currency.wrap(to).iso_code}_AT_#{date}".upcase
       end
