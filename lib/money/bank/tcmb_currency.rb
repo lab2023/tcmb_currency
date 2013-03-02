@@ -19,13 +19,11 @@ class Money
 
       attr_reader :rates
 
-     
       def flush_rates
         @mutex.synchronize{
           @rates = {}
         }
       end
-
 
       def flush_rate(from, to, date)
         key = rate_key_for(from, to)
@@ -66,7 +64,6 @@ class Money
 
       private
 
-    
       def fetch_rate(from, to, date)
         from, to = Currency.wrap(from), Currency.wrap(to)
 
@@ -76,7 +73,6 @@ class Money
 
         return data['amount']
       end
-
       
       def build_uri(from, to, date)
       	
@@ -86,7 +82,6 @@ class Money
           :query => "cash=1&from=#{from.iso_code}&to=#{to.iso_code}&date=#{date}"
         )
       end
-
       
       def fix_response_json_data(data)
         data.gsub!(/from:/, '"from":')
@@ -104,5 +99,3 @@ class Money
     end
   end
 end
-
-
