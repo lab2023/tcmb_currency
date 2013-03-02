@@ -70,7 +70,6 @@ class Money
         data = build_uri(from, to, date).read
         data = fix_response_json_data(data)
 
-
         return data['amount']
       end
       
