@@ -32,9 +32,7 @@ then add to /config/initializers/money.rb file
 	require 'money'
 	require 'money/bank/tcmb_currency'
 	require 'json'
-	MultiJson.engine = :json_gem # or :yajl
-
-	# set default bank to instance of GoogleCurrency
+	MultiJson.engine = :json_gem
 	Money.default_bank = Money::Bank::TcmbCurrency.new
 
 at last add to daily cron tasks this rake 
