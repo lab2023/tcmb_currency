@@ -10,12 +10,14 @@ Gem::Specification.new do |gem|
   gem.email         = ["htkaya90@gmail.com"]
   gem.description   = %q{Tcmb gem}
   gem.summary       = %q{Access the TCMB exchange rate data.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/lab2023/tcmb_currency"
   gem.required_rubygems_version = ">= 1.3.6"
-  gem.add_development_dependency "yard", ">= 0.5.8"
-  gem.add_development_dependency "json", ">= 1.4.0"
-  gem.add_development_dependency "yajl-ruby", ">= 1.0.0"
-  gem.add_development_dependency "ffi"
+  gem.add_dependency "yard", ">= 0.5.8"
+  gem.add_dependency "json", ">= 1.4.0"
+  gem.add_dependency "yajl-ruby", ">= 1.0.0"
+  gem.add_dependency "ffi"
+  gem.add_dependency "money"
+  gem.add_dependency "money-rails"
   gem.files         = `git ls-files`.split($/)
   gem.files 		=  Dir.glob("{lib}/**/*")
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
