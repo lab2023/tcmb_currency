@@ -2,8 +2,9 @@ class CreateCrossRatesTable < ActiveRecord::Migration
   def self.up
     create_table :cross_rates do |t|
       t.string :code
+      t.string :name
       t.string :rate
-      t.date   :date
+      t.date :date
       t.timestamps
     end
     add_index :cross_rates, :code

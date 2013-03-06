@@ -18,6 +18,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "ffi"
   gem.add_dependency "money"
   gem.add_dependency "money-rails"
+  gem.add_dependency "nokogiri"
   gem.files         = `git ls-files`.split($/)
   gem.files 		=  Dir.glob("{lib}/**/*")
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
