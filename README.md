@@ -8,6 +8,7 @@ it based on [money gem](https://github.com/RubyMoney/money), [money-rails Gem](h
 
 Add this line to your application's Gemfile:
 	
+	gem 'money-rails'
     gem 'tcmb_currency'
 
 And then execute:
@@ -22,22 +23,13 @@ Or install it yourself as:
 	
 After the installing gems run:
 
-	$ rails g money_rails:initializer
+	$ rails g tcmb_currency:initializer
 	$ rails g tcmb_currency:migration
 	$ rake db:migrate
 
-then add to /config/initializers/money.rb file
-	
-
-	require 'money'
-	require 'money/bank/tcmb_currency'
-	require 'json'
-	MultiJson.engine = :json_gem
-	Money.default_bank = Money::Bank::TcmbCurrency.new
-
 at last add to daily cron tasks this rake 
 	
-	$ rake tcmb_currency:insert
+	$ rake tcmb_currency:insert_from_tcmb
 
 And you can use it as
 
