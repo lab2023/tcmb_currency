@@ -9,7 +9,7 @@ class CreateCurrencyTypes < ActiveRecord::Migration
     currencies = ["USD", "EUR", "GBP", "TRY", "CAD", "XDR", "DKK", "SEK", "CHF", "NOK",
                   "JPY", "SAR", "KWD", "AUD", "RUB", "RON", "PKR", "IRR", "CNY", "BGN"]
     currencies.each do |c|
-      CurrencyType.create(:currency => c.to_s)
+      CURRENCY_TYPE.create(:currency => c.to_s)
     end
   end
 
