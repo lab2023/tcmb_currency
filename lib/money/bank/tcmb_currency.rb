@@ -41,17 +41,13 @@ class Money
       def exchange_with(*args)
         from, to_currency, date = args[0], args[1], args[2]
         return from if same_currency?(from.currency, to_currency)
-
         rate = get_rate(from.currency, to_currency, date)
         unless rate
           raise UnknownRate, "No conversion rate known for '#{from.currency.iso_code}' -> '#{to_currency}'"
         end
         _to_currency_ = Currency.wrap(to_currency)
-
         fractional = BigDecimal.new(from.fractional.to_s) / (BigDecimal.new(from.currency.subunit_to_unit.to_s) / BigDecimal.new(_to_currency_.subunit_to_unit.to_s))
-
-        ex = fractional * BigDecimal.new(rate.to_s)
-        ex = ex.to_f
+        ex = (fractional * BigDecimal.new(rate.to_s)).to_f
         ex = if block_given?
                yield ex
              elsif @rounding_method
