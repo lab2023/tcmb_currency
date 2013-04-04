@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/lab2023/tcmb_currency.png)](https://codeclimate.com/github/lab2023/tcmb_currency)
+[![Dependency Status](https://gemnasium.com/lab2023/tcmb_currency.png)](https://gemnasium.com/lab2023/tcmb_currency)
 # TcmbCurrency
 
 Tcmb Currencies for [Money Gem](https://github.com/RubyMoney/money)
