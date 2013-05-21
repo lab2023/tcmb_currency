@@ -49,7 +49,7 @@ And you can use it as
 
 Once you've made your great commits:
 
-1. Fork Template
+1. Fork Gem
 2. Create a topic branch - `git checkout -b my_branch`
 3. Push to your branch - `git push origin my_branch`
 4. Create a Pull Request from your branch
@@ -57,7 +57,7 @@ Once you've made your great commits:
 
 ## Credits
 
-Rails Template is maintained and funded by [lab2023 - internet technologies](http://lab2023.com/)
+This gem is maintained and funded by [lab2023 - internet technologies](http://lab2023.com/)
 
 Thank you to all the [contributors!](https://github.com/lab2023/tcmb_currency/graphs/contributors)
 
