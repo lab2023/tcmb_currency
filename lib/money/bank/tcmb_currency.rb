@@ -5,7 +5,7 @@ require 'multi_json'
 require "active_record"
 
 class Money
-  def exchange_to(to_currency, date = Time.now.to_date)
+  def exchange_to(to_currency, date = nil)
     other_currency = Currency.wrap(to_currency)
     bank = Bank::TcmbCurrency.new
     bank.exchange_with(self, to_currency, date)
@@ -68,8 +68,14 @@ class Money
 
       def fetch_rate(from, to, date)
         from, to = Currency.wrap(from), Currency.wrap(to)
-        f = CrossRate.where(code: from.to_s, date: date).last
-        t = CrossRate.where(code: to.to_s, date: date).last
+        if date.nil?
+          f = CrossRate.where(code: from.to_s).last
+          t = CrossRate.where(code: to.to_s).last
+        else
+          f = CrossRate.where(code: from.to_s, date: date).last
+          t = CrossRate.where(code: to.to_s, date: date).last
+        end
+
         return rate = t.rate.to_f/f.rate.to_f
       end
       
