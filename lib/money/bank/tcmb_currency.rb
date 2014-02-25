@@ -1,8 +1,8 @@
-require "tcmb_currency/version"
+require 'tcmb_currency/version'
 require 'money'
 require 'open-uri'
 require 'multi_json'
-require "active_record"
+require 'active_record'
 
 class Money
   def exchange_to(to_currency, date = nil)
@@ -15,11 +15,11 @@ class Money
     class TcmbCurrency < Money::Bank::VariableExchange
 
       class CrossRate < ActiveRecord::Base
-        attr_accessible :code, :name, :rate, :date
+
       end
 
       class CurrencyType < ActiveRecord::Base
-        attr_accessible :currency
+
       end
 
       attr_reader :rates

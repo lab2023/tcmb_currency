@@ -1,7 +1,10 @@
 
 #### [Current]
+ * [a3f92aa](../../commit/a3f92aa) - __(hamitturkukaya)__ TB-10 #time 20m Rails 4 support added
+ * [c500633](../../commit/c500633) - __(hamitturkukaya)__ Moved new branch for Rails 3 support
 
-#### 
+#### 0.3.0
+ * [9ed1c1b](../../commit/9ed1c1b) - __(hamitturkukaya)__ [#1](../../issues/1) changelog.md and security.md added
  * [d50738e](../../commit/d50738e) - __(hamitturkukaya)__ rate error fixed
  * [e7ca118](../../commit/e7ca118) - __(Muhammet DİLEK)__ Update README.md
  * [5d027d4](../../commit/5d027d4) - __(hamitturkukaya)__ code optimization
