@@ -11,7 +11,14 @@ it based on [money gem](https://github.com/RubyMoney/money), [money-rails Gem](h
 Add this line to your application's Gemfile:
 	
 	gem 'money-rails'
-    gem 'tcmb_currency'
+
+    ### For rails 4.x
+
+    gem 'tcmb_currency', '~> 0.4.0', :git => 'git://github.com/lab2023/tcmb_currency.git'
+
+    ### For rails 3.x
+
+    gem 'tcmb_currency', '~> 0.3.0', git: 'git://github.com/lab2023/tcmb_currency.git', branch: 'rails3'
 
 And then execute:
 
