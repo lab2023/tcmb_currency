@@ -64,7 +64,9 @@ Once you've made your great commits:
 
 ## Credits
 
-This gem is maintained and funded by [lab2023 - internet technologies](http://lab2023.com/)
+![lab2023](http://lab2023.com/assets/images/named-logo.png)
+
+This gem is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
 
 Thank you to all the [contributors!](https://github.com/lab2023/tcmb_currency/graphs/contributors)
 
@@ -74,4 +76,4 @@ The names and logos for lab2023 are trademarks of lab2023, inc.
 
 [MIT License](http://www.opensource.org/licenses/mit-license)
 
-Copyright 2012 lab2023 – internet technologies
+Copyright 2014 lab2023 - information technologies
