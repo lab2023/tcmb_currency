@@ -1,4 +1,4 @@
-Copyright (c) 2014 hamitturkukaya
+Copyright (c) 2014 lab2023 – internet technologies
 
 MIT License
 
