@@ -1,5 +1,9 @@
 
 #### [Current]
+ * [94f946a](../../commit/94f946a) - __(Murat Kemal BAYGÜN)__ Fix copyright info
+
+#### 0.4.0
+ * [720b9cf](../../commit/720b9cf) - __(hamitturkukaya)__ Bump version 0.4.0
  * [a3f92aa](../../commit/a3f92aa) - __(hamitturkukaya)__ TB-10 #time 20m Rails 4 support added
  * [c500633](../../commit/c500633) - __(hamitturkukaya)__ Moved new branch for Rails 3 support
 
