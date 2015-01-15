@@ -68,7 +68,7 @@ Once you've made your great commits:
 
 This gem is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
 
-Thank you to all the [contributors!](https://github.com/lab2023/tcmb_currency/graphs/contributors)
+Thank you to all the [contributors!](../../graphs/contributors)
 
 The names and logos for lab2023 are trademarks of lab2023, inc.
 
