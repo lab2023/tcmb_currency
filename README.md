@@ -14,11 +14,8 @@ Add this line to your application's Gemfile:
 
     ### For rails 4.x
 
-    gem 'tcmb_currency', '~> 0.4.0', :git => 'git://github.com/lab2023/tcmb_currency.git'
+    gem 'tcmb_currency', '~> 0.5.0', :git => 'git://github.com/lab2023/tcmb_currency.git'
 
-    ### For rails 3.x
-
-    gem 'tcmb_currency', '~> 0.3.0', git: 'git://github.com/lab2023/tcmb_currency.git', branch: 'rails3'
 
 And then execute:
 
@@ -51,6 +48,8 @@ And you can use it as
 
 	Money.new(1000,"USD").exchange_to(:EUR)
 	Money.new(1000,"USD").exchange_to(:EUR, "2013-03-02")
+	
+If there is no record for searches with history, you will get `There is no record in that date` error.
 	
 ## Contributing
 

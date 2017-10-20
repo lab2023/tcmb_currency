@@ -6,9 +6,8 @@ require 'active_record'
 
 class Money
   def exchange_to(to_currency, date = nil)
-    other_currency = Currency.wrap(to_currency)
     bank = Bank::TcmbCurrency.new
-    bank.exchange_with(self, to_currency, date)
+    bank.exchange_with!(self, to_currency, date)
   end
 
   module Bank
@@ -24,24 +23,10 @@ class Money
 
       attr_reader :rates
 
-      def flush_rates
-        @mutex.synchronize {
-          @rates = {}
-        }
-      end
-
-
-      def flush_rate(from, to)
-        key = rate_key_for(from,to)
-        @mutex.synchronize {
-          @rates.delete(key)
-        }
-      end
-
-      def exchange_with(*args)
+      def exchange_with!(*args)
         from, to_currency, date = args[0], args[1], args[2]
         return from if same_currency?(from.currency, to_currency)
-        rate = get_rate(from.currency, to_currency, date)
+        rate = fetch_rate!(from.currency, to_currency, date)
         unless rate
           raise UnknownRate, "No conversion rate known for '#{from.currency.iso_code}' -> '#{to_currency}'"
         end
@@ -58,27 +43,25 @@ class Money
         Money.new(ex, _to_currency_)
       end
 
-      def get_rate(from, to, date)
-        @mutex.synchronize {
-          @rates[rate_key_for(from, to)] ||= fetch_rate(from, to, date)
-        }
-      end
-
       private
 
-      def fetch_rate(from, to, date)
-        from, to = Currency.wrap(from), Currency.wrap(to)
+      def fetch_rate!(from, to, date)
+        from, to = Money::Currency.wrap(from), Money::Currency.wrap(to)
+        from_rate = 1.0
+        to_rate = 1.0
         if date.nil?
-          f = CrossRate.where(code: from.to_s).last
-          t = CrossRate.where(code: to.to_s).last
+          from_rate = Money::Bank::TcmbCurrency::CrossRate.where(code: from.to_s).last.rate.to_f unless from.to_s == 'USD'
+          to_rate = Money::Bank::TcmbCurrency::CrossRate.where(code: to.to_s).last.rate.to_f unless to.to_s == 'USD'
         else
-          f = CrossRate.where(code: from.to_s, date: date).last
-          t = CrossRate.where(code: to.to_s, date: date).last
+          if Money::Bank::TcmbCurrency::CrossRate.where(date: date).present?
+            from_rate = Money::Bank::TcmbCurrency::CrossRate.where(code: from.to_s, date: date).last.rate.to_f unless from.to_s == 'USD'
+            to_rate = Money::Bank::TcmbCurrency::CrossRate.where(code: to.to_s, date: date).last.rate.to_f unless to.to_s == 'USD'
+          else
+            raise 'There is no record in that date.'
+          end
         end
-
-        return rate = t.rate.to_f/f.rate.to_f
+        to_rate/from_rate
       end
-      
     end
   end
 end

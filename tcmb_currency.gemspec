@@ -6,8 +6,8 @@ require 'tcmb_currency/version'
 Gem::Specification.new do |gem|
   gem.name          = "tcmb_currency"
   gem.version       = TcmbCurrency::VERSION
-  gem.authors       = ["hamitturkukaya"]
-  gem.email         = ["htkaya90@gmail.com"]
+  gem.authors       = %w[lab2023]
+  gem.email         = %w[info@lab2023.com]
   gem.description   = %q{Tcmb gem}
   gem.summary       = %q{Access the TCMB exchange rate data.}
   gem.homepage      = "https://github.com/lab2023/tcmb_currency"
