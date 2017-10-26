@@ -5,7 +5,7 @@ module TcmbCurrency
   class MigrationGenerator < Rails::Generators::Base
     include Rails::Generators::Migration
 
-    namespace "tcmb_currency:migration"
+    namespace 'tcmb_currency:migration'
 
     source_root File.join(File.dirname(__FILE__), 'templates')
 
@@ -14,8 +14,10 @@ module TcmbCurrency
     end
 
     def create_migration_file
-      migration_template 'typemigration.rb', 'db/migrate/create_currency_types.rb' rescue nil
-      migration_template 'migration.rb', 'db/migrate/create_cross_rates_table.rb' rescue nil
+      migration_template 'typemigration.rb', 'db/migrate/create_currency_types.rb'
+      migration_template 'migration.rb', 'db/migrate/create_cross_rates_table.rb'
+    rescue StandardError => e
+      raise e
     end
   end
 end

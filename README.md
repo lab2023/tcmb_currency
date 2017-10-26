@@ -14,11 +14,8 @@ Add this line to your application's Gemfile:
 
     ### For rails 4.x
 
-    gem 'tcmb_currency', '~> 0.4.0', :git => 'git://github.com/lab2023/tcmb_currency.git'
+    gem 'tcmb_currency', '~> 0.5.0', :git => 'git://github.com/lab2023/tcmb_currency.git'
 
-    ### For rails 3.x
-
-    gem 'tcmb_currency', '~> 0.3.0', git: 'git://github.com/lab2023/tcmb_currency.git', branch: 'rails3'
 
 And then execute:
 
@@ -32,8 +29,8 @@ Or install it yourself as:
 
 Before generating your application, you will need:
 
-* The Ruby language (version 1.9.3)
-* Rails 3.2
+* The Ruby language (min version 2.0)
+* Rails 4.0(min version) 
 
 ## Usage
 	
@@ -52,6 +49,8 @@ And you can use it as
 	Money.new(1000,"USD").exchange_to(:EUR)
 	Money.new(1000,"USD").exchange_to(:EUR, "2013-03-02")
 	
+If there is no record for searches with history, you will get `There is no record in that date` error.
+	
 ## Contributing
 
 Once you've made your great commits:
@@ -68,7 +67,7 @@ Once you've made your great commits:
 
 This gem is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
 
-Thank you to all the [contributors!](https://github.com/lab2023/tcmb_currency/graphs/contributors)
+Thank you to all the [contributors!](../../graphs/contributors)
 
 The names and logos for lab2023 are trademarks of lab2023, inc.
 
@@ -76,5 +75,5 @@ The names and logos for lab2023 are trademarks of lab2023, inc.
 
 [MIT License](http://www.opensource.org/licenses/mit-license)
 
-Copyright 2014 lab2023 - information technologies
+Copyright 2017 lab2023 - information technologies
 

@@ -5,7 +5,7 @@ module TcmbCurrency
     railtie_name :tcmb_currency
 
     rake_tasks do
-      load "tasks/tcmb_currency.rake"
+      load 'tasks/tcmb_currency.rake'
     end
   end
 end
