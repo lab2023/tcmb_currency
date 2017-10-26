@@ -29,8 +29,8 @@ Or install it yourself as:
 
 Before generating your application, you will need:
 
-* The Ruby language (version 1.9.3)
-* Rails 3.2
+* The Ruby language (min version 2.0)
+* Rails 4.0(min version) 
 
 ## Usage
 	
@@ -75,5 +75,5 @@ The names and logos for lab2023 are trademarks of lab2023, inc.
 
 [MIT License](http://www.opensource.org/licenses/mit-license)
 
-Copyright 2014 lab2023 - information technologies
+Copyright 2017 lab2023 - information technologies
 
