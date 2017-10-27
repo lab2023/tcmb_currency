@@ -1,4 +1,4 @@
-class CreateCrossRatesTable < ActiveRecord::Migration
+class CreateCrossRatesTable < ActiveRecord::Migration[5.0]
   def self.up
     create_table :cross_rates do |t|
       t.string :code
