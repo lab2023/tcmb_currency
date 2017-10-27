@@ -14,7 +14,7 @@ Add this line to your application's Gemfile:
 
     ### For rails 4.x
 
-    gem 'tcmb_currency', '~> 0.5.0', :git => 'git://github.com/lab2023/tcmb_currency.git'
+    gem 'tcmb_currency', '~> 0.5.2', :git => 'git://github.com/lab2023/tcmb_currency.git'
 
 
 And then execute:
@@ -23,7 +23,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install tcmb_currency
+    $ gem install tcmb_currency -v 0.5.2
     
 ## Requirements
 
@@ -75,5 +75,5 @@ The names and logos for lab2023 are trademarks of lab2023, inc.
 
 [MIT License](http://www.opensource.org/licenses/mit-license)
 
-Copyright 2017 lab2023 - information technologies
+Copyright 2014-2017 lab2023 - information technologies
 
