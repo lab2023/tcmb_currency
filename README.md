@@ -14,13 +14,6 @@ Add this line to your application's Gemfile:
 
     gem 'tcmb_currency'
     
-## Requirements
-    
-Before generating your application, you will need:
-
-* The Ruby language version  2.0(min version)
-* Rails 5.0(min version) 
-
 And then execute:
 
     $ bundle install
@@ -48,6 +41,12 @@ And you can use it as
 	
 If there is no record for searches with history, you will get `There is no record in that date` error.
 
+## Requirements
+    
+Before generating your application, you will need:
+
+* The Ruby language version  2.0(min version)
+* Rails 5.0(min version) 
 
 ## For rails 4.x
     
