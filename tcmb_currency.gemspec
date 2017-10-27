@@ -14,6 +14,8 @@ Gem::Specification.new do |gem|
   gem.description   = 'TCMB gem'
   gem.summary       = 'Access the TCMB exchange rate data.'
   gem.homepage      = 'https://github.com/lab2023/tcmb_currency'
+  gem.licenses      = ['MIT']
+  gem.required_ruby_version = '>= 2.0'
   gem.required_rubygems_version = '>= 1.3.6'
   gem.add_dependency 'ffi'
   gem.add_dependency 'json', '>= 1.4.0'
