@@ -1,4 +1,4 @@
-class CreateCurrencyTypes < ActiveRecord::Migration
+class CreateCurrencyTypes < ActiveRecord::Migration[5.0]
   def self.up
     create_table :currency_types do |t|
       t.string :currency
