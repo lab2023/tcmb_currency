@@ -12,26 +12,16 @@ Add this line to your application's Gemfile:
 	
 	gem 'money-rails'
 
-    ### For rails 4.x
-
-    gem 'tcmb_currency', '~> 0.5.2', :git => 'git://github.com/lab2023/tcmb_currency.git'
-
-
+    gem 'tcmb_currency'
+    
 And then execute:
 
     $ bundle install
 
 Or install it yourself as:
-
-    $ gem install tcmb_currency -v 0.5.2
-    
-## Requirements
-
-Before generating your application, you will need:
-
-* The Ruby language (min version 2.0)
-* Rails 4.0(min version) 
-
+   
+    $ gem install tcmb_currency
+     
 ## Usage
 	
 After the installing gems run:
@@ -50,6 +40,26 @@ And you can use it as
 	Money.new(1000,"USD").exchange_to(:EUR, "2013-03-02")
 	
 If there is no record for searches with history, you will get `There is no record in that date` error.
+
+## Requirements
+    
+Before generating your application, you will need:
+
+* The Ruby language version  2.0(min version)
+* Rails 5.0(min version) 
+
+## For rails 4.x
+    
+  * Add this line to your application's Gemfile:
+    
+    gem 'tcmb_currency', '~> 0.5.2'
+    
+  * Requirements
+    
+    Before generating your application, you will need:
+    
+    * The Ruby language version 2.0(min version)
+    * Rails 4.0(min version)
 	
 ## Contributing
 
