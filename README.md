@@ -10,8 +10,6 @@ it based on [money gem](https://github.com/RubyMoney/money), [money-rails Gem](h
 
 Add this line to your application's Gemfile:
 	
-	gem 'money-rails'
-
     gem 'tcmb_currency'
     
 And then execute:
